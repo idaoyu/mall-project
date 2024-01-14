@@ -17,7 +17,7 @@ public class OperatingCategoryParams {
     /**
      * 类目id
      */
-    @NotEmpty(message = "类目id不能为空",groups = ValidatedGroup.UpdateGroup.class)
+    @NotEmpty(message = "类目id不能为空", groups = ValidatedGroup.UpdateGroup.class)
     private String id;
 
     /**
@@ -29,13 +29,13 @@ public class OperatingCategoryParams {
     /**
      * 类目名字
      */
-    @NotEmpty(message = "类目名字不能为空")
+    @NotEmpty(message = "类目名字不能为空", groups = {ValidatedGroup.CreateGroup.class, ValidatedGroup.UpdateGroup.class})
     private String name;
 
     /**
      * 排序字段
      */
-    @NotNull(message = "排序字段不能为空")
+    @NotNull(message = "排序字段不能为空", groups = {ValidatedGroup.CreateGroup.class, ValidatedGroup.UpdateGroup.class})
     private Integer sortNum;
 
 }

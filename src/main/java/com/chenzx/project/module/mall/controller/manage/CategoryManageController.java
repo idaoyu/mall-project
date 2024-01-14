@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
  * @author 一条秋刀鱼zz qchenzexuan@vip.qq.com
  * @since 2024-01-14 14:56
  **/
+@Validated
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/mall/manage/category")
