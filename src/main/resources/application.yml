@@ -6,6 +6,10 @@ spring:
   jackson:
     # 指定时区
     time-zone: Asia/Shanghai
+    # 响应实体中的字段为null时不返回
+    default-property-inclusion: non_empty
+    # 响应时间类型全部转换为该格式
+    date-format: yyyy-MM-dd HH:mm:ss
 mybatis-plus:
   global-config:
     db-config:
