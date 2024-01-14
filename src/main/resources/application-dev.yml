@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://sh-cynosdbmysql-grp-qgd5p4e4.sql.tencentcdb.com:21506/mall_dev
+    username: mall_dev
+    password: Dpc~(AEb-J9o+s8%@e{2
+  data:
+    redis:
+      database: 0
+      port: 6379
+      host: 123.207.202.228
+      password: udKQW27M90GtybfUjgoH
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: false
+      log-format: "time:%(executionTime) || sql:%(sql)"
+      logging: slf4j
+
