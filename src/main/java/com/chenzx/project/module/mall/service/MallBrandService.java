@@ -32,6 +32,6 @@ public class MallBrandService extends ServiceImpl<MallBrandMapper, MallBrand> {
 
     public IPage<MallBrand> pageGetBrand(PageGetBrandParams params) {
         LambdaQueryWrapper<MallBrand> wrapper = Wrappers.lambdaQuery();
-        return super.page(Page.of(params.getCurrent(), params.getSize()), wrapper);
+        return super.page(Page.of(params.getCurrent(), params.getPageSize()), wrapper);
     }
 }

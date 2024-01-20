@@ -29,7 +29,7 @@ public class MallCategoryService extends ServiceImpl<MallCategoryMapper, MallCat
         LambdaQueryWrapper<MallCategory> wrapper = Wrappers.lambdaQuery();
         wrapper.orderByAsc(MallCategory::getSortNum);
         wrapper.isNull(MallCategory::getParentId);
-        return super.page(Page.of(params.getCurrent(), params.getSize()), wrapper);
+        return super.page(Page.of(params.getCurrent(), params.getPageSize()), wrapper);
     }
 
     /**

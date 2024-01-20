@@ -13,4 +13,15 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class PageGetPropertyParams extends PageParams {
+
+    /**
+     * 属性id
+     */
+    private String id;
+
+    /**
+     * 属性名字
+     */
+    private String name;
+
 }

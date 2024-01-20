@@ -21,7 +21,7 @@ public class PageParams {
     /**
      * 一页大小
      */
-    @NotNull(message = "size 不能为空")
-    private Integer size;
+    @NotNull(message = "pageSize 不能为空")
+    private Integer pageSize;
 
 }

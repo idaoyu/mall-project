@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenzx.project.module.mall.data.PageGetPropertyParams;
 import com.chenzx.project.module.mall.entity.MallProperty;
 import com.chenzx.project.module.mall.mapper.MallPropertyMapper;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 /**
@@ -40,7 +41,9 @@ public class MallPropertyService extends ServiceImpl<MallPropertyMapper, MallPro
      */
     public IPage<MallProperty> pageByParams(PageGetPropertyParams params) {
         LambdaQueryWrapper<MallProperty> wrapper = Wrappers.lambdaQuery();
-        return super.page(Page.of(params.getCurrent(), params.getSize()), wrapper);
+        wrapper.eq(StringUtils.isNotBlank(params.getId()), MallProperty::getId, params.getId());
+        wrapper.like(StringUtils.isNotBlank(params.getName()), MallProperty::getName, params.getName());
+        return super.page(Page.of(params.getCurrent(), params.getPageSize()), wrapper);
     }
 
 }

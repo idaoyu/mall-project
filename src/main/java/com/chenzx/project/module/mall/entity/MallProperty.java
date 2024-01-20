@@ -29,7 +29,7 @@ public class MallProperty implements Serializable {
     /**
      * 属性类型
      */
-    @TableField(value = "`type")
+    @TableField(value = "`type`")
     private Integer type;
 
     /**
