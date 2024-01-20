@@ -32,7 +32,7 @@ public class PropertyManageBusinessService {
 
     @Transactional
     public void createProperty(OperationPropertyParams params) {
-        MallProperty property = MallProperty.builder().name(params.getName()).build();
+        MallProperty property = MallProperty.builder().name(params.getName()).type(params.getType()).build();
         boolean saveProperty = mallPropertyService.save(property);
         if (!saveProperty) {
             throw new BizException("创建属性时产生错误，请稍后重试");
@@ -115,6 +115,7 @@ public class PropertyManageBusinessService {
                                 mallPropertyValueService.listByPropertyId(property.getId())
                                         .stream().map(v -> new PageGetPropertyValueVO(v.getId(), v.getValue())).toList()
                         )
+                        .type(property.getType())
                         .build())
         );
     }

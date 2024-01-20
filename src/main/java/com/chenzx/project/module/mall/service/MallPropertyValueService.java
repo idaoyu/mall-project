@@ -55,5 +55,4 @@ public class MallPropertyValueService extends ServiceImpl<MallPropertyValueMappe
         return super.update(wrapper);
     }
 
-
 }

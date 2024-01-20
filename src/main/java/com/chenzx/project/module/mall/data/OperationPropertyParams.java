@@ -37,4 +37,11 @@ public class OperationPropertyParams {
     @NotEmpty(message = "属性值列表不能为空", groups = {ValidatedGroup.CreateGroup.class, ValidatedGroup.UpdateGroup.class})
     private List<OperationPropertyValueDTO> valueList;
 
+    /**
+     * 属性类型
+     * 主要属性（会展示图片的）、次要属性（尺码、大小等）
+     */
+    @NotEmpty(message = "属性类型不能为空", groups = {ValidatedGroup.CreateGroup.class})
+    private Integer type;
+
 }

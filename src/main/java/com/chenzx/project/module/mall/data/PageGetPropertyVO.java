@@ -27,4 +27,9 @@ public class PageGetPropertyVO {
      */
     private List<PageGetPropertyValueVO> valueList;
 
+    /**
+     * 属性类型
+     */
+    private Integer type;
+
 }
